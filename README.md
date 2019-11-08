@@ -8,13 +8,21 @@ Comprar:
 
 Entrada:
     Conexión BT - ADC, transmisión de datos
+    
     Conexión BT - BT, delay
+    
     Conexión BT - EDU-CIAA
+    
     Conexión filtro anti-aliasing - ADC
+    
     Conexión micrófono - filtro anti-aliasing, ganancia y bias
+    
     Alimentación placa externa
+    
     *PCB placa externa*
+    
     Conexión ADC - EDU-CIAA
+    
     *PCB placa principal, poncho*
 
 Salida:
