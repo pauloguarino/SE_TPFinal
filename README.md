@@ -4,7 +4,15 @@ TP Final de Sistemas Embebidos
 ## Hardware
 
 Comprar:
-    Mics, módulos BT, ADCs, ficha de audio, regulador, pila, opamps (MC33202), RC
+
+    Mics
+    Módulos BT
+    Módulos ADC
+    Ficha de audio
+    Regulador
+    Pila
+    Opamps (MC33202)
+    RC
 
 Entrada:
 
@@ -19,55 +27,57 @@ Entrada:
     *PCB placa principal, poncho*
 
 Salida:
+
     Conexión filtro reconstructor - EDU-CIAA, ganancia y bias
     Conexión ficha de audio - filtro reconstructor
     *DAC externo*
     *PCB placa principal, poncho*
 
-*Opt:
+*Opt:*
+
     PCB
     DAC externo
         Adaptar filtro de reconstrucción
-        Adaptar software*
+        Adaptar software
 
 ## Software
 
-Diagrama de estados, LEDS de validación
-Comunicación ADC
-Comunicación BT
-Escritura por DAC
-*Comunicación DAC externo*
-Punto flotante
+    Diagrama de estados, LEDS de validación
+    Comunicación ADC
+    Comunicación BT
+    Escritura por DAC
+    *Comunicación DAC externo*
+    Punto flotante
 
 ## Algoritmos
 
-Generación de ruido blanco
-Identificación del sistema
-Prueba de convergencia
-Filtro adaptativo
-*distintos filtros*
-Algoritmo de dithering
-*Libraries de fxLMS*
+    Generación de ruido blanco
+    Identificación del sistema
+    Prueba de convergencia
+    Filtro adaptativo
+    *distintos filtros*
+    Algoritmo de dithering
+    *Libraries de fxLMS*
 
 ## Interfaz
 
-Inicio y apagado
-Elección de parámetros
-Verificación de convergencia
-*envío de datos por BT*
-*elección de filtros*
-*ploteo de FFT*
+    Inicio y apagado
+    Elección de parámetros
+    Verificación de convergencia
+    *envío de datos por BT*
+    *elección de filtros*
+    *ploteo de FFT*
 
 ## Testeo
 
-Funcionamiento del camino captura de señal - conversión A/D - conversión D/A - reproducción de sonido
-Cancelación de ruido en modo FF
-Cancelación de ruido en modo FB
-Modificación de parámetros de los filtros digitales para mejorar la eficacia del cancelador
-Limitaciones del sistema en cuanto a las frecuencias del ruido a cancelar y la zona en donde cancela ruido
+    Funcionamiento del camino captura de señal - conversión A/D - conversión D/A - reproducción de sonido
+    Cancelación de ruido en modo FF
+    Cancelación de ruido en modo FB
+    Modificación de parámetros de los filtros digitales para mejorar la eficacia del cancelador
+    Limitaciones del sistema en cuanto a las frecuencias del ruido a cancelar y la zona en donde cancela ruido
 
 ## Informe
 
-Diagrama de instalación y conexión de micrófonos y parlantes.
-Indicaciones para la modificación de parámetros en tiempo real.
-Informe final que incluye un diagrama esquemático del funcionamiento del dispositivo, y los resultados y análisis de las pruebas realizadas.
+    Diagrama de instalación y conexión de micrófonos y parlantes.
+    Indicaciones para la modificación de parámetros en tiempo real.
+    Informe final que incluye un diagrama esquemático del funcionamiento del dispositivo, y los resultados y análisis de las pruebas realizadas.
