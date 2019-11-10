@@ -1,0 +1,1 @@
+Se puede ajustar la ganancia del adc para no usar al límite el R2R
