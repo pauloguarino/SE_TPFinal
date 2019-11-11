@@ -1,2 +1,3 @@
 Se puede ajustar la ganancia del adc para no usar al límite el R2R
 Considearar que no puedo excederme a la entrada
+Pasar a float y normalizar
