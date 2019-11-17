@@ -1,7 +1,7 @@
-/* Copyright 2016, Eric Pernia.
+/* Copyright 2017, Pablo Ridolfi, Juan Esteban Alarcón, Juan Manuel Cruz
  * All rights reserved.
  *
- * This file is part sAPI library for microcontrollers.
+ * This file is part of Workspace.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -31,55 +31,27 @@
  *
  */
 
-/*
- * Date: 2016-04-26
- */
+#ifndef TIMERTICKS_H_
+#define TIMERTICKS_H_
 
-/*==================[inclusions]=============================================*/
+#include "Main_state_diagram.h"
 
-//#include "blinky.h"   // <= own header (optional)
-#include "sapi.h"       // <= sAPI header
+typedef struct
+{
+	sc_eventid evid;
+	sc_uinteger time_ms;
+	sc_uinteger count;
+	sc_boolean periodic;
+	sc_boolean active;
+	sc_boolean evPending;
+} TimerTicks;
 
-/*==================[macros and definitions]=================================*/
 
-/*==================[internal data declaration]==============================*/
+void InitTimerTicks(TimerTicks *list, uint32_t len);
+sc_eventid SetNewTimerTick(TimerTicks *list, uint32_t len, sc_eventid evid, sc_uinteger time_ms, sc_boolean periodic);
+sc_eventid UnsetTimerTick(TimerTicks *list, uint32_t len, sc_eventid evid);
+sc_boolean IsPendEvent(TimerTicks *list, uint32_t len, sc_eventid evid);
+void MarkAsAttEvent(TimerTicks *list, uint32_t len, sc_eventid evid);
+void UpdateTimers(TimerTicks *list, uint32_t len);
 
-/*==================[internal functions declaration]=========================*/
-
-/*==================[internal data definition]===============================*/
-
-/*==================[external data definition]===============================*/
-
-/*==================[internal functions definition]==========================*/
-
-/*==================[external functions definition]==========================*/
-
-/* FUNCION PRINCIPAL, PUNTO DE ENTRADA AL PROGRAMA LUEGO DE RESET. */
-//int main(void){
-
-   /* ------------- INICIALIZACIONES ------------- */
-
-   /* Inicializar la placa */
-// boardConfig();
-
-   /* ------------- REPETIR POR SIEMPRE ------------- */
-//   while(1) {
-
-      /* Prendo el led azul */
-//      gpioWrite( LEDB, ON );
-
-//      delay(500);
-
-      /* Apago el led azul */
-//      gpioWrite( LEDB, OFF );
-
-//      delay(500);
-
-//   }
-
-   /* NO DEBE LLEGAR NUNCA AQUI, debido a que a este programa no es llamado
-      por ningun S.O. */
-//   return 0 ;
-//}
-
-/*==================[end of file]============================================*/
+#endif /* TIMERTICKS_H_ */

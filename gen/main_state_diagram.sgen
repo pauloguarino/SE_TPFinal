@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::c {
+
+	statechart main_state_diagram {
+
+		feature Outlet {
+			targetProject = "firmware_v2"
+			targetFolder = "projects/TP_Final/gen"
+			libraryTargetFolder = "projects/TP_Final/gen"
+		}
+	}
+}

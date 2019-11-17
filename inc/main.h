@@ -1,7 +1,7 @@
-/* Copyright 2016, Eric Pernia.
+/* Copyright 2016, Pablo Ridolfi
  * All rights reserved.
  *
- * This file is part sAPI library for microcontrollers.
+ * This file is part of Workspace.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -31,55 +31,35 @@
  *
  */
 
-/*
- * Date: 2016-04-26
- */
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+/** \addtogroup statechart Simple UML Statechart example.
+ ** @{ */
 
 /*==================[inclusions]=============================================*/
 
-//#include "blinky.h"   // <= own header (optional)
-#include "sapi.h"       // <= sAPI header
+/*==================[cplusplus]==============================================*/
 
-/*==================[macros and definitions]=================================*/
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-/*==================[internal data declaration]==============================*/
+/*==================[macros]=================================================*/
 
-/*==================[internal functions declaration]=========================*/
+/*==================[typedef]================================================*/
 
-/*==================[internal data definition]===============================*/
+/*==================[external data declaration]==============================*/
 
-/*==================[external data definition]===============================*/
+/*==================[external functions declaration]=========================*/
 
-/*==================[internal functions definition]==========================*/
+int main(void);
 
-/*==================[external functions definition]==========================*/
+/*==================[cplusplus]==============================================*/
 
-/* FUNCION PRINCIPAL, PUNTO DE ENTRADA AL PROGRAMA LUEGO DE RESET. */
-//int main(void){
-
-   /* ------------- INICIALIZACIONES ------------- */
-
-   /* Inicializar la placa */
-// boardConfig();
-
-   /* ------------- REPETIR POR SIEMPRE ------------- */
-//   while(1) {
-
-      /* Prendo el led azul */
-//      gpioWrite( LEDB, ON );
-
-//      delay(500);
-
-      /* Apago el led azul */
-//      gpioWrite( LEDB, OFF );
-
-//      delay(500);
-
-//   }
-
-   /* NO DEBE LLEGAR NUNCA AQUI, debido a que a este programa no es llamado
-      por ningun S.O. */
-//   return 0 ;
-//}
+#ifdef __cplusplus
+}
+#endif
 
 /*==================[end of file]============================================*/
+#endif /* #ifndef _MAIN_H_ */
